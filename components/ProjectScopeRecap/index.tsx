@@ -7,7 +7,7 @@ import { useMediaQuery } from 'react-responsive'
 import scopePng from '../../assets/scope.png'
 import style from './style.module.scss'
 
-const menuItems  = [
+const menuItems: any[] = [
     {
         label: 'Overview',
         disabled: true
@@ -117,7 +117,7 @@ export default function ProjectScopeRecap() {
                             </div>
 
                             <div>
-                                For all the ways you work, we're here
+                                For all the ways you work, we&apos;re here
                             </div>
                         </div>
   
