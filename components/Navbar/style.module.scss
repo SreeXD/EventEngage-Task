@@ -1,0 +1,164 @@
+.nav {
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--color-background);
+    z-index: 1;
+
+    @media (max-width: 1000px) {
+        padding: 0.5rem 1rem;
+    }
+    
+    @media (max-width: 600px) {
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+.toggler {
+    position: fixed;
+    top: 0.6rem;
+    right: 0.4rem;
+}
+
+.navMenu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.role {
+    color: var(--color-grey-darker);
+    font-size: 1.05rem;
+}
+
+.navMenuItem {
+    align-items: center;
+    width: 90vw;
+    gap: 1rem;
+    padding: 1rem 1rem;
+    border-bottom: solid 1px var(--color-grey);
+    transition: background-color 500ms;
+
+    &:hover {
+        .menuIcon {
+            :nth-child(1) {
+                opacity: 0.9;
+            }
+        }
+
+        background-color: var(--color-background-darker);
+        cursor: pointer;
+    }
+}
+
+.menuIcon {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+
+    :nth-child(1) {
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        transition: opacity 500ms;
+    }
+}
+
+.menuItemName {
+    font-size: 1.1rem;
+    font-size: 500;
+}
+
+.navLeft {
+    align-items: center;
+    gap: 0.5rem;
+    transform-origin: left center;
+
+    @media (max-width: 1000px) {
+        gap: 0.4rem;
+        transform: scale(0.95);
+    }
+
+    @media (max-width: 600px) {
+        gap: 0.3rem;
+        transform: scale(0.9);
+    }
+}
+
+.navRight {
+    margin-left: auto;
+    align-items: center;
+    gap: 0.9rem;
+    transform-origin: right center;
+
+    @media (max-width: 1000px) {
+        gap: 0.8rem;
+        transform: scale(0.9);
+    }
+
+    @media (max-width: 600px) {
+        gap: 0.7rem;
+        transform: scale(0.8);
+    }
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+
+    :nth-child(1) {
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        transition: opacity 500ms;
+    }
+
+    &:nth-child(2) {
+        padding: 0.275rem;
+    }
+
+    &:hover {
+        :nth-child(1) {
+            opacity: 0.9;
+        }
+
+        cursor: pointer;
+    }
+}
+
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-left: 0.5rem;
+}
+
+.menuAvatar {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 100%;
+}

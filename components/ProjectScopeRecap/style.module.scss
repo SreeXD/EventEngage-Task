@@ -1,0 +1,271 @@
+.section { 
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 1.25rem;
+    gap: 1rem;
+    background-color: var(--color-background);
+
+    @media (max-width: 1000px) {
+        padding: 0.5rem 1rem;
+    }
+    
+    @media (max-width: 600px) {
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+.sectionTop {
+    align-items: center;
+}
+
+.title {
+    font-size: calc(0.7rem + 1vw);
+    font-weight: 500;
+}
+
+.progress {
+    margin-left: auto;
+    width: calc(8rem + 10vw);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transform-origin: right center;
+
+    @media (max-width: 600px) {
+        transform: scale(0.75);
+    }
+}
+
+.bars {
+    gap: 3px;
+}
+
+.bar {
+    display: inline-block;
+    flex-grow: 1;
+    height: 0.5rem;
+    background-color: var(--color-active);
+}
+
+.progressText {
+    display: flex;
+    align-items: center;
+    color: var(--color-grey-darker);
+}
+
+.progressVal {
+    color: var(--color-active);
+    font-weight: 500;
+    font-size: 1rem;    
+    margin-left: auto;
+}
+
+.buttons {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.buttonsLeft {
+    gap: 0.25rem;
+    transform-origin: left center;
+    flex-wrap: nowrap;
+
+    @media (max-width: 600px) {
+        transform: scale(0.8);
+    }
+    
+    @media (max-width: 350px) {
+        transform: scale(0.7);
+    }
+}
+
+.buttonsRight {
+    margin-left: auto;
+}
+
+.buttonActive {
+    color: var(--color-active);
+    font-weight: 500;
+}
+
+.sectionBottom {
+    margin-top: 0.75rem;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.companyProfile {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.companyProfileTop {
+    align-items: center;
+}
+
+.companyProfileTitle {
+    font-size: calc(0.7rem + 1vw);
+    font-weight: 500;
+}
+
+.companyProfileRight {
+    margin-left: auto;
+    display: flex;
+    gap: 0.6rem;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.25rem;
+
+    * {
+        width: auto;
+        height: 1.1rem;
+
+        svg {
+            opacity: 0.3;
+            transition: opacity 500ms;
+        }
+    }
+
+    > *:hover {
+        svg {
+            opacity: 0.8;
+        }
+
+        cursor: pointer;
+    }
+}
+
+.menu {
+    > :nth-child(1) {
+        cursor: default;
+
+        & > * {
+            color: var(--color-grey-darker);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+    }
+
+    font-weight: 400;
+    color: var(--color-grey-darker);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.scopeImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+}
+
+.scopeImgText {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-transparent);
+    width: 40%;
+    height: 40%;
+    font-weight: 500;
+    padding-bottom: 2rem;
+
+    :nth-child(1) {
+        font-size: calc(0.6rem + 5vw);
+    }
+    
+    :nth-child(2) {
+        font-size: calc(0.35rem + 1vw);
+    }
+
+    @media (max-width: 1000px) {
+        width: 50%;
+        height: 50%;
+    }
+    
+    @media (max-width: 600px) {
+        width: 60%;
+        height: 60%;
+    }
+}
+
+.scopeImgControls {
+    position: absolute;
+    top: 5%;
+    background-color: var(--color-transparent);
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+
+    * {
+        width: auto;
+        height: 1.3rem;
+
+        svg {
+            opacity: 0.4;
+            transition: opacity 500ms;
+        }
+    }
+
+    
+    > *:hover {
+        svg {
+            opacity: 0.8;
+        }
+
+        cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+        gap: 0.8rem;
+        top: 2%;
+        transform: scale(0.8);
+    }
+    
+    @media (max-width: 350px) {
+        gap: 0.6rem;
+        top: 0%;
+        transform: scale(0.65);
+    }
+}
+
+.pdfIcon {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+}
+
+.pdfIconText {
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.bottomIcons {
+    gap: 1rem;
+
+    * {
+        width: auto;
+        height: 1.25rem;
+
+        svg {
+            opacity: 0.4;
+            transition: opacity 500ms;
+        }
+    }
+
+    > *:hover {
+        svg {
+            opacity: 0.75;
+        }
+
+        cursor: pointer;
+    }
+}

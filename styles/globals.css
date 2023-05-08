@@ -14,3 +14,20 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --color-grey: #e8e8e8;
+  --color-grey-darker: #888;
+  --color-active: #00B686;
+  --color-transparent: #ffffffaa;
+  --color-background: #F2FBF9;
+  --color-background-darker: #e7efee;
+}
+
+.spinner-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
